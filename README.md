@@ -1,26 +1,6 @@
-# springboot-react-keycloak
+# FilmFolio
 
 The goal of this project is to secure `movies-app` using [`Keycloak`](https://www.keycloak.org/)(with PKCE). `movies-app` consists of two applications: one is a [Spring Boot](https://docs.spring.io/spring-boot/index.html) Rest API called `movies-api` and another is a [React](https://react.dev/) application called `movies-ui`.
-
-## Proof-of-Concepts & Articles
-
-On [ivangfr.github.io](https://ivangfr.github.io), I have compiled my Proof-of-Concepts (PoCs) and articles. You can easily search for the technology you are interested in by using the filter. Who knows, perhaps I have already implemented a PoC or written an article about what you are looking for.
-
-## Additional Readings
-
-- \[**Medium**\] [**Implementing a Full Stack Web App using Spring-Boot and React**](https://medium.com/@ivangfr/implementing-a-full-stack-web-app-using-spring-boot-and-react-7db598df4452)
-- \[**Medium**\] [**Using Keycloak to secure a Full Stack Web App implemented with Spring-Boot and React**](https://medium.com/@ivangfr/using-keycloak-to-secure-a-full-stack-web-app-implemented-with-spring-boot-and-react-6b2d80fc5c12)
-- \[**Medium**\] [**Implementing and Securing a Simple Spring Boot REST API with Keycloak**](https://medium.com/@ivangfr/how-to-secure-a-spring-boot-app-with-keycloak-5a931ee12c5a)
-- \[**Medium**\] [**Implementing and Securing a Simple Spring Boot UI (Thymeleaf + RBAC) with Keycloak**](https://medium.com/@ivangfr/how-to-secure-a-simple-spring-boot-ui-thymeleaf-rbac-with-keycloak-ba9f30b9cb2b)
-- \[**Medium**\] [**Implementing and Securing a Spring Boot GraphQL API with Keycloak**](https://medium.com/@ivangfr/implementing-and-securing-a-spring-boot-graphql-api-with-keycloak-c461c86e3972)
-- \[**Medium**\] [**Setting Up OpenLDAP With Keycloak For User Federation**](https://medium.com/@ivangfr/setting-up-openldap-with-keycloak-for-user-federation-82c643b3a0e6)
-- \[**Medium**\] [**Integrating GitHub as a Social Identity Provider in Keycloak**](https://medium.com/@ivangfr/integrating-github-as-a-social-identity-provider-in-keycloak-982f521a622f)
-- \[**Medium**\] [**Integrating Google as a Social Identity Provider in Keycloak**](https://medium.com/@ivangfr/integrating-google-as-a-social-identity-provider-in-keycloak-c905577ec499)
-- \[**Medium**\] [**Building a Single Spring Boot App with Keycloak or Okta as IdP: Introduction**](https://medium.com/@ivangfr/building-a-single-spring-boot-app-with-keycloak-or-okta-as-idp-introduction-2814a4829aed)
-
-## Project diagram
-
-![project-diagram](documentation/project-diagram.jpeg)
 
 ## Applications
 
@@ -108,8 +88,6 @@ This script will:
     ./mvnw clean spring-boot:run -Dspring-boot.run.jvmArguments="-Dserver.port=9080"
     ```
 
-  - We can also configure **Social Identity Providers** such as, `GitHub`, `Google`, `Facebook` and `Instagram`. I've written two articles in **Medium** where I explain step-by-step how to integrate [GitHub](https://medium.com/@ivangfr/integrating-github-as-a-social-identity-provider-in-keycloak-982f521a622f) and [Google](https://medium.com/@ivangfr/integrating-google-as-a-social-identity-provider-in-keycloak-c905577ec499).
-
 - **movies-ui**
 
   - Open another terminal and navigate to the `springboot-react-keycloak/movies-ui` folder;
@@ -131,16 +109,6 @@ This script will:
 | movie-api   | http://localhost:9080/swagger-ui.html | [Access Token](#getting-access-token) |
 | movie-ui    | http://localhost:3000                 | `admin/admin` or `user/user`          |
 | Keycloak    | http://localhost:8080                 | `admin/admin`                         |
-
-## Demo
-
-- The gif below shows an `admin` logging in and adding one movie using the wizard feature:
-
-  ![demo-admin](documentation/demo-admin.gif)
-
-- The gif below shows a `user` logging in using his Github account; then he changes his avatar and comment on a movie:
-
-  ![demo-user-github](documentation/demo-user-github.gif)
 
 ## Testing movies-api endpoints
 
@@ -229,18 +197,7 @@ We can manage movies by directly accessing `movies-api` endpoints using the Swag
 
 - Done! We can now access the secured endpoints.
 
-## Useful Commands
-
-- **MongoDB**
-
-  List all movies:
-  ```bash
-  docker exec -it mongodb mongosh moviesdb
-  db.movies.find()
-  ```
-  > Type `exit` to exit of MongoDB shell.
-
-## Shutdown
+- ## Shutdown
 
 - To stop `movies-api` and `movies-ui`, go to the terminals where they are running and press `Ctrl+C`;
 
@@ -248,20 +205,3 @@ We can manage movies by directly accessing `movies-api` endpoints using the Swag
   ```bash
   ./shutdown-environment.sh
   ```
-
-## How to upgrade movies-ui dependencies to latest version
-
-- In a terminal, make sure you are in the `springboot-react-keycloak/movies-ui` folder;
-
-- Run the following commands:
-  ```bash
-  npm upgrade
-  npm i -g npm-check-updates
-  ncu -u
-  npm install
-  ```
-#   F i l m F o l i o 
- 
- #   F i l m F o l i o 
- 
- 
