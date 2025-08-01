@@ -260,6 +260,8 @@ We can manage movies by directly accessing `movies-api` endpoints using the Swag
   ncu -u
   npm install
   ```
-#   F i l m F o l i o  
- #   F i l m F o l i o  
+#   F i l m F o l i o 
+ 
+ #   F i l m F o l i o 
+ 
  
